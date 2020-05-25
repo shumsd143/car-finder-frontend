@@ -1,0 +1,38 @@
+.body{
+    margin-top: 70px;
+}
+.head{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.input-outer{
+    border:1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 300px;
+    border-radius: 100px;
+    background-color: white;
+}
+.input-inner{
+    margin-top: 2%;
+    width: 260px;
+    border: none;
+}
+.input-inner::-webkit-input-placeholder {
+    text-align: center;
+}
+.input-inner:focus{
+    outline: none;
+}
+.outer-region{
+    background-image: url('https://smalbanynewyork.files.wordpress.com/2018/09/police-car-explosion-anim.gif');
+    background-size: cover;
+}
+.margin-button{
+    margin-top: 50px;
+}
+.search-button{
+    margin-top: 30px;
+    height: 100px;
+}

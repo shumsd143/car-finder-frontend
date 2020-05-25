@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route} from 'react-router-dom' 
 import './App.css';
+import Main from './component/main';
+import CarPostMain from './component/user-component/car-post-main';
+import PoliceMain from './component/police-component/police-main';
+import AfterLogin from './component/after-police-login/after-police-login';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route exact path="/" component={Main}/>
+      <Route path="/user/post" component={CarPostMain}/>
+      <Route path="/police/login" component={PoliceMain}/>
+      <Route path="/police/after_login" component={AfterLogin}/>
     </div>
   );
 }
