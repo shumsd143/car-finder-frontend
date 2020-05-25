@@ -11,7 +11,7 @@ class AfterSearch extends React.Component {
         }
     }
     fetcher = () => {
-        fetch('http://localhost:4000/car/status/' + this.props.value)
+        fetch('https://car-finder-backend.herokuapp.com/car/status/' + this.props.value)
             .then(res => res.json())
             .then(json => {
                 if (json.status === 'not found') {
@@ -23,7 +23,7 @@ class AfterSearch extends React.Component {
                 }
                 else {
                     if (json.data.police_assigned === true) {
-                        fetch('http://localhost:4000/police/info/' + json.data.police_info).then(resp => resp.json()).then(response => {
+                        fetch('https://car-finder-backend.herokuapp.com/police/info/' + json.data.police_info).then(resp => resp.json()).then(response => {
                             this.setState({
                                 ...json.data,
                                 police_name: response.username,

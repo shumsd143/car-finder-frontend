@@ -12,7 +12,7 @@ class ClientData extends React.Component{
         }
     }
     fetcher=()=>{
-        fetch('http://localhost:4000/car/detail/'+this.props.id)
+        fetch('https://car-finder-backend.herokuapp.com/car/detail/'+this.props.id)
         .then(res=>res.json())
         .then(res=>{
             console.log(res)
@@ -42,7 +42,7 @@ class ClientData extends React.Component{
             car_id:this.state._id,
             police_id:this.state.police_info,
         }
-        Axios.post('http://localhost:4000/car/found',body).then(res=>{
+        Axios.post('https://car-finder-backend.herokuapp.com/car/found',body).then(res=>{
             window.location.reload()
         })
     }

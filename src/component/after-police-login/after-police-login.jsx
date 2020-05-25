@@ -12,7 +12,7 @@ class AfterLogin extends React.Component {
         }
     }
     fetcher = (id) => {
-        fetch('http://localhost:4000/police/info/' + id).then(res => res.json()).then(res => {
+        fetch('https://car-finder-backend.herokuapp.com/police/info/' + id).then(res => res.json()).then(res => {
             this.setState({
                 ...res,
                 load: true,

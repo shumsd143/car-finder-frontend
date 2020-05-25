@@ -30,7 +30,7 @@ class CarPostMain extends React.Component{
             police_info:'',
             img_url:image
         }
-        Axios.post('http://localhost:4000/info',data).then(res=>{
+        Axios.post('https://car-finder-backend.herokuapp.com/info',data).then(res=>{
             this.setState({
                 posting_loader:false
             })
@@ -54,7 +54,7 @@ class CarPostMain extends React.Component{
         if(this.state.imageload===true){
             const data= new FormData();
             data.append('image',this.state.imagevalue[0])
-            Axios.post('http://localhost:4000/upload',data,{
+            Axios.post('https://car-finder-backend.herokuapp.com/upload',data,{
                 headers:{
                     'Content-Type':'multipart/form-data'
                 }

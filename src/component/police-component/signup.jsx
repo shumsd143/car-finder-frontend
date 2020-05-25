@@ -21,7 +21,7 @@ class Signup extends React.Component {
             return
         }
         this.setState({load:true})
-        Axios.post('http://localhost:4000/police/signup',data).then(res=>{
+        Axios.post('https://car-finder-backend.herokuapp.com/police/signup',data).then(res=>{
             if(res.status!==200){
                 this.setState({show_error:true,load:false})
             }
